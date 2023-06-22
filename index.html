@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" 
+    integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <title>Carga Facturas</title>
+</head>
+<body>
+    
+    <div class='container'>
+        <h1>Carga de Facturas de Compras</h1>
+        <form id="forma">
+            <div class='mb-3'>
+                <label for="fechaFac">Fecha Factura</label>
+                <input type="date" name="fechaFac" id="fechaFac" class="form-control"/>
+            </div>
+                <div class="mb-3">            
+                <label for="nroFac">Número Factura - </label>
+                <select class="agregar_tipo" id="tipo">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </Select>
+                <label for="puntoVenta"> - </label>
+                <input class="form-control" type="number" name="puntoVenta" id="puntoVenta" placeholder="3301"/> - 
+                <input class="form-control" type="number" name="nroFac" id="nroFac" placeholder="2354465"/>
+            </div>
+            <div class="mb-3">
+                <label for="nroCUIT">CUIT</label>
+                <input class="form-control" type="number" name="nroCUIT" id="nroCUIT" placeholder="20328596831"/>
+            </div>         
+            <div class="mb-3">
+                <label for="rzSoc">Razon Social</label>
+                <input class="form-control" type="text" name="rzSoc" id="rzSoc" placeholder="Juana La Pistolera"/>
+            </div>
+            <div class="mb-3">
+                <label for="monto">Sub Total s/IVA</label>
+                <input class="form-control" type="number" name="monto" id="monto" placeholder="$ 2313"/>
+            </div>     
+            <button type="submit" class="btn btn-primary mb-3">Guardar Datos</button>
+        </form>      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    
+</body>
+</html>
