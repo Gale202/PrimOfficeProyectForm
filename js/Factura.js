@@ -1,6 +1,7 @@
 class Factura{
     static contadorFactura = 0;
-    constructor(fechaFac, tipoFac, nroPuntoVenta, nroFac, nroCUIT, rzSoc, monto){
+    constructor(fechaFac, tipoFac, nroPuntoVenta, 
+        nroFac, nroCUIT, rzSoc, monto, nroCAE){
         this._idFactura = ++Factura.contadorFactura;
         this._fechaFac = fechaFac;
         this._tipoFac = tipoFac;
@@ -9,6 +10,7 @@ class Factura{
         this._nroCUIT = nroCUIT;
         this._rzSoc = rzSoc;
         this._monto = monto;
+        this._nroCAE = nroCAE;
     }
     
     get idFactura(){
@@ -62,6 +64,13 @@ class Factura{
     }
     set monto(monto){
         this._monto = monto;
+    }
+
+    get nroCAE(){
+        return this._nroCAE;
+    }
+    set nroCAE(nroCAE){
+        this._nroCAE = nroCAE;
     }
 
 }

@@ -11,12 +11,12 @@
     
     <div class='container'>
         <h1>Carga de Facturas de Compras</h1>
-        <form id="forma">
+        <form id="forma" onsubmit="return false;">
             <div class='mb-3'>
                 <label for="fechaFac">Fecha Factura</label>
                 <input type="date" name="fechaFac" id="fechaFac" class="form-control"/>
             </div>
-                <div class="mb-3">            
+            <div class="mb-3">            
                 <label for="nroFac">Número Factura - </label>
                 <select class="agregar_tipo" id="tipo">
                     <option value="A">A</option>
@@ -24,22 +24,26 @@
                     <option value="C">C</option>
                 </Select>
                 <label for="puntoVenta"> - </label>
-                <input class="form-control" type="number" name="puntoVenta" id="puntoVenta" placeholder="3301"/> - 
-                <input class="form-control" type="number" name="nroFac" id="nroFac" placeholder="2354465"/>
+                <input class="form-control" type="number" name="puntoVenta" id="puntoVenta" placeholder="3301" required="true"/> - 
+                <input class="form-control" type="number" name="nroFac" id="nroFac" placeholder="2354465" required="true"/>
             </div>
             <div class="mb-3">
                 <label for="nroCUIT">CUIT</label>
-                <input class="form-control" type="number" name="nroCUIT" id="nroCUIT" placeholder="23723494043"/>
+                <input class="form-control" type="number" name="nroCUIT" id="nroCUIT" placeholder="23723494043" required="true"/>
             </div>         
             <div class="mb-3">
                 <label for="rzSoc">Razon Social</label>
-                <input class="form-control" type="text" name="rzSoc" id="rzSoc" placeholder="Juana La Pistolera"/>
+                <input class="form-control" type="text" name="rzSoc" id="rzSoc" placeholder="Juana La Pistolera" required="true"/>
             </div>
             <div class="mb-3">
                 <label for="monto">Sub Total s/IVA</label>
-                <input class="form-control" type="number" name="monto" id="monto" placeholder="$ 2313"/>
-            </div>     
-            <button type="submit" class="btn btn-primary mb-3">Guardar Datos</button>
+                <input class="form-control" type="number" name="monto" id="monto" placeholder="$ 2313" required="true"/>
+            </div>
+            <div class="mb-3">
+                <label for="nroCAE">NRO CAE</label>
+                <input class="form-control" type="number" name="nroCAE" id="nroCAE" placeholder="72314310558320" required="true"/>
+            </div>      
+            <button class="btn btn-primary mb-3" onclick="guardarDatos()">Guardar Datos</button>
         </form>      
     </div>
 
